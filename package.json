@@ -1,0 +1,16 @@
+{
+  "name": "editor",
+  "version": "1.0.0",
+  "description": "This code editor can be used to build applications",
+  "main": "editor.js",
+  "scripts": {
+    "dev": "w3",
+    "start": "w3 ${PORT}"
+  },
+  "keywords": [],
+  "author": "Tom",
+  "license": "ISC",
+  "dependencies": {
+    "w3": "^0.6.1"
+  }
+}
