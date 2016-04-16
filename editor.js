@@ -384,6 +384,10 @@ var workspace = Blockly.inject('blocklyDiv', {
     length: 3,
     colour: '#ccc',
     snap: true
+  },
+  zoom: {
+    controls: true,
+    wheel: true
   }
 })
 
