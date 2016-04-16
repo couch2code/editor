@@ -12,6 +12,8 @@ var applyToBlock = require('./components/apply-to')
 var getElementByIdBlock = require('./components/get-element-by-id')
 var callBlock = require('./components/call')
 var assignBlock = require('./components/assign')
+var addClassBlock = require('./components/add-class')
+var removeClassBlock = require('./components/remove-class')
 
 //var PouchDB = require('npm:pouchdb')
 var db = PouchDB('https://twilson63.cloudant.com/code10k')
@@ -23,7 +25,7 @@ var body = domify(`
   </div>
   <div class="row">
     <div class="col-md-8">
-      <div id="blocklyDiv" style="min-height: 600px; width: '100%';"></div>
+      <div id="blocklyDiv" style="height: 600px; width: '100%';"></div>
     </div>
     <div class="col-md-4">
       <div class="pull-md-right">
@@ -32,9 +34,9 @@ var body = domify(`
         <button id="new" class="btn btn-warning">New</button>
       </div>
       <h4 class="m-t-3">Output</h3>
-      <div class="jumbotron">
-        <div id="output"></div>
-      </div>
+      <hr />
+      <div id="output"></div>
+      <hr />
       <h4 class="m-t-3">Code</h3>
       <div class="">
         <pre id="code">
@@ -354,7 +356,11 @@ var body = domify(`
       <block type="write"></block>
       <block type="getelementbyid"></block>
     </category>
-    <category name="JS" id="catJS" color="320">
+    <category name="CSS" id="catCSS" colour="180">
+      <block type="css_add_class"></block>
+      <block type="css_remove_class"></block>
+    </category>
+    <category name="JS" id="catJS" colour="320">
       <block type="apply"></block>
       <block type="applyto"></block>
       <block type="call"></block>
@@ -375,6 +381,8 @@ applyToBlock(Blockly)
 getElementByIdBlock(Blockly)
 callBlock(Blockly)
 assignBlock(Blockly)
+addClassBlock(Blockly)
+removeClassBlock(Blockly)
 
 var workspace = Blockly.inject('blocklyDiv', {
   media: 'https://rawgit.com/google/blockly/master/media/',
