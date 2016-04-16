@@ -23,7 +23,7 @@ var body = domify(`
   </div>
   <div class="row">
     <div class="col-md-8">
-      <div id="blocklyDiv" style="height: '100%'; width: '100%';"></div>
+      <div id="blocklyDiv" style="height: '600px'; width: '100%';"></div>
     </div>
     <div class="col-md-4">
       <div class="pull-md-right">
@@ -384,11 +384,12 @@ var workspace = Blockly.inject('blocklyDiv', {
     length: 3,
     colour: '#ccc',
     snap: true
-  },
-  zoom: {
-    controls: true,
-    wheel: true
   }
+  // ,
+  // zoom: {
+  //   controls: true,
+  //   wheel: true
+  // }
 })
 
 

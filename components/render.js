@@ -19,9 +19,7 @@ module.exports = function (Blockly) {
     var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME')
     var code = `
       var target = document.getElementById('output')
-      target.appendChild(
-        h('div', [${R.dropLast(1,statements_name.split('//')).join(',')}])
-      )
+      target.innerHTML = h('div', [${R.dropLast(1,statements_name.split('//')).join(',')}])
     `;
     return code;
   }
