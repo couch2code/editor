@@ -8,6 +8,7 @@ module.exports = function (Blockly) {
           .appendField("render");
       this.appendStatementInput("NAME")
           .setCheck(null);
+      this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setColour(20);
       this.setTooltip('');
