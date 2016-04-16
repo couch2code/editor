@@ -433,7 +433,7 @@ document.getElementById('save')
 
 document.getElementById('new')
   .addEventListener('click', function (e) {
-    window.location.href = '/editor.html'
+    window.location.href = '/'
   })
 
 if (window.location.hash) {
