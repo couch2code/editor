@@ -14,6 +14,26 @@
   color: yellow
 }
 
+.orange {
+  color: orange
+}
+
+.indigo {
+  color: indigo
+}
+
+.turqoise {
+  color: #43C6DB;
+}
+
+.purple {
+  color: rebbecapurple;
+}
+
+.gold {
+  color: gold
+}
+
 .bk-red {
   background-color: red
 }
@@ -28,4 +48,24 @@
 
 .bk-yellow {
   background-color: yellow
+}
+
+.bk-orange {
+  background-color: orange
+}
+
+.bk-indigo {
+  background-color: indigo
+}
+
+.bk-turqoise {
+  background-color: #43C6DB;
+}
+
+.bk-purple {
+  background-color: rebbecapurple;
+}
+
+.bk-gold {
+  background-color: gold
 }
