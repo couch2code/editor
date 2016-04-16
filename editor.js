@@ -23,7 +23,7 @@ var body = domify(`
   </div>
   <div class="row">
     <div class="col-md-8">
-      <div id="blocklyDiv" style="min-height: '800px'; width: '100%';"></div>
+      <div id="blocklyDiv" style="min-height: 800px; width: '100%';"></div>
     </div>
     <div class="col-md-4">
       <div class="pull-md-right">
