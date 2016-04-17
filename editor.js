@@ -14,6 +14,8 @@ var callBlock = require('./components/call')
 var assignBlock = require('./components/assign')
 var addClassBlock = require('./components/add-class')
 var removeClassBlock = require('./components/remove-class')
+var objectNodeBlock = require('./components/object-node')
+var objectCreateBlock = require('./components/object-create')
 
 //var PouchDB = require('npm:pouchdb')
 var db = PouchDB('https://twilson63.cloudant.com/code10k')
@@ -306,6 +308,10 @@ var body = domify(`
         </value>
       </block>
     </category>
+    <category name="Objects" id="catObject" colour="40">
+      <block type="object_create"></block>
+      <block type="object_node"></block>
+    </category>
     <category name="Colors" id="catColour" colour="20">
       <block type="colour_picker"></block>
       <block type="colour_random"></block>
@@ -383,6 +389,8 @@ callBlock(Blockly)
 assignBlock(Blockly)
 addClassBlock(Blockly)
 removeClassBlock(Blockly)
+objectCreateBlock(Blockly)
+objectNodeBlock(Blockly)
 
 var workspace = Blockly.inject('blocklyDiv', {
   media: 'https://rawgit.com/google/blockly/master/media/',
